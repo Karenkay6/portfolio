@@ -4,31 +4,41 @@ export default function Hero() {
   return (
   <section
   className="
-    min-h-[92vh]
-    px-32
-    pb-24
+    min-h-screen
+    px-5
+    pb-20
+    pt-28
+    sm:px-8
+    lg:min-h-[92vh]
+    lg:px-32
+    lg:pb-24
   "
 >
-  {/* Space below the floating navbar */}
-  <div className="h-26" />
   <div
     className="
       grid
-      grid-cols-[52%_48%]
-      gap-10
-      items-start
+      grid-cols-1
+      items-center
+      gap-12
+      lg:grid-cols-[52%_48%]
+      lg:gap-10
     "
   >
 
         {/* LEFT SIDE */}
-        <div className="flex justify-center">
-          <div className="w-[520px] translate-x-10">
+        <div className="flex justify-center lg:justify-start">
+  <div className="w-full max-w-[520px] lg:translate-x-10">
 
           <p className="text-[#0f1a0d] text-lg tracking-wide mb-5">
             Hi there, my name is
           </p>
 
-          <h1 className="text-7xl font-bold leading-none text-[#5d090d]">
+          <h1 className="
+  text-6xl
+  font-bold
+  leading-[0.95]
+  sm:text-7xl
+ text-[#5d090d]">
             Tochi
             <br />
             Karen
@@ -43,11 +53,28 @@ export default function Hero() {
           <span className="h-px w-12 bg-[#8b1115]/50" />
         </div>
 
-          <h2 className="mt-15 text-3xl text-[#3a2022] leading-snug max-w-[460px]">
+          <h2   className="
+    mt-10
+    max-w-[460px]
+    text-2xl
+    leading-snug
+    text-[#000000]
+    sm:text-3xl
+    lg:mt-15
+  ">
             Future Software Engineer Focused on Healthcare Innovation 
           </h2>
 
-          <p className="mt-15 text-lg leading-8 max-w-[460px] text-[#0e1014]">
+          <p  className="
+    mt-8
+    max-w-[460px]
+    text-base
+    leading-7
+    text-[#0e1014]
+    sm:text-lg
+    sm:leading-8
+    lg:mt-15
+  ">
             I'm a CS student at The University of Texas at San Antonio that enjoys
               building software that improves peoples lives through
             thoughtful technology, clean design, and meaningful user
@@ -89,7 +116,7 @@ export default function Hero() {
         </div>
 
                {/* RIGHT SIDE */}
-        <div className="flex justify-start -ml-16">
+        <div className="flex justify-center lg:-ml-16 lg:justify-start">
           <PhotoSlideshow />
         </div>
 

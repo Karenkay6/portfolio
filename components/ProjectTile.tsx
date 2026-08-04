@@ -36,27 +36,36 @@ const secondMetricLabel =
   return (
     <div
       className={`
-        border-1
-        border-[#8b1115]/50
-        rounded-none
-        p-8
-        bg-transparent
-        flex
-        flex-col
-        ${featured ? "min-h-[260px]" : "min-h-[240px]"}
-      `}
+  flex
+  flex-col
+  rounded-none
+  border
+  border-[#8b1115]/50
+  bg-transparent
+  p-5
+  sm:p-8
+  ${
+    featured
+      ? "min-h-[220px] sm:min-h-[260px]"
+      : "min-h-[210px] sm:min-h-[240px]"
+  }
+`}
     >
+     
       {/* TOP ROW */}
       <div className="flex justify-between items-start gap-6">
         <h3
           className="
-            text-3xl
-            font-bold
-            text-[#000000]
-            flex
-            items-center
-            gap-3
-          "
+  flex
+  items-center
+  gap-2
+  text-2xl
+  font-bold
+  leading-tight
+  text-[#000000]
+  sm:gap-3
+  sm:text-3xl
+"
         >
           <span className="text-[#000000] text-xl">•</span>
           {title}
@@ -106,21 +115,18 @@ const secondMetricLabel =
       />
 
       {/* EVERYTHING BELOW THE DIVIDER */}
-      <div
-        style={{
-          marginLeft: "20px",
-          marginRight: "20px",
-        }}
-      >
+      <div className="px-1 sm:px-5">
         {/* DETAILS */}
         <p
           className="
-            mt-6
-            text-2xl
-            
-            leading-8
-            text-[#000000]
-          "
+  mt-5
+  text-lg
+  leading-7
+  text-[#000000]
+  sm:mt-6
+  sm:text-xl
+  sm:leading-8
+"
         >
           {description}
         </p>
@@ -217,16 +223,18 @@ const secondMetricLabel =
 {/* TECH STACK */}
 <div
   className="
-    mt-8
-    flex
-    flex-wrap
-    font-semibold
-    gap-x-8
-    gap-y-4
-    text-md
-    tracking-wide
-    text-[#000000]
-  "
+  mt-6
+  flex
+  flex-wrap
+  gap-x-5
+  gap-y-3
+  text-base
+  font-semibold
+  tracking-wide
+  text-[#000000]
+  sm:mt-8
+  sm:gap-x-8
+"
 >
           {tech.map((item) => (
             <span

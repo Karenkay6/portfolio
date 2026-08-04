@@ -74,20 +74,37 @@ export default function Navbar() {
       aria-label="Main navigation"
     >
       <div
-        className="
-          relative
-          rounded-full
-          border
-          border-[#8b1115]
-          bg-[#fbe7e2]/90
-          px-7
-          py-3
-          shadow-[0_8px_25px_rgba(72,10,14,0.13)]
-          backdrop-blur-xl
-          md:px-10
-        "
-      >
-        <div className="relative flex items-center gap-6 text-sm font-semibold md:gap-10 md:text-base">
+  className="
+    relative
+    max-w-[calc(100vw-32px)]
+    overflow-x-auto
+    rounded-full
+    border-2
+    border-red-800
+    bg-white/85
+    px-4
+    py-3
+    shadow-xl
+    backdrop-blur-xl
+    sm:px-8
+    sm:py-4
+  "
+>
+        <div
+  className="
+    relative
+    flex
+    items-center
+    gap-6
+    whitespace-nowrap
+    text-sm
+    font-semibold
+    sm:gap-10
+    sm:text-base
+    lg:gap-16
+    lg:text-lg
+  "
+>
           <span
             className="
               absolute

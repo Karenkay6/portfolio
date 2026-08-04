@@ -11,9 +11,12 @@ export default function Frame({ children }: FrameProps) {
         my-6
         min-h-[calc(100vh-48px)]
         w-[96%]
-        max-w-[1450px]
+max-w-[1450px]
+sm:w-[92%]
+lg:w-[88%]
         overflow-hidden
-        rounded-[32px]
+        rounded-[24px]
+sm:rounded-[32px]
         border-[4px]
         border-[#8b1115]
         bg-[#fbe7e2]

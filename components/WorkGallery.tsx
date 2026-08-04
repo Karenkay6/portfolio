@@ -19,8 +19,9 @@ export default function WorkGallery() {
           flex
           flex-col
           items-center
-          py-20
           px-4
+py-10
+sm:py-20
         "
       >
         {/*
@@ -38,13 +39,14 @@ export default function WorkGallery() {
           {/* MAIN PROJECTS GALLERY */}
           <div
             className="
-              mt-24
+              mt-10
+sm:mt-24
               w-full
               grid
               grid-cols-1
               md:grid-cols-2
-              gap-x-10
-              gap-y-10
+              gap-6
+sm:gap-10
             "
           >
             {/* FEATURED PROJECT */}

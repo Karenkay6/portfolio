@@ -25,20 +25,18 @@ export default function PhotoSlideshow() {
       <div
   className="
     relative
-    h-[600px]
-    w-[470px]
-    rounded-[34px]
+    aspect-[4/5]
+    w-full
+    max-w-[470px]
     overflow-hidden
-
-    -translate-y-10
-
-    bg-white/25
+    rounded-[28px]
     border
-    border-black
-
-    backdrop-blur-md
-
+    border-[#8b1115]/40
+    bg-white/25
     shadow-[0_25px_60px_rgba(0,0,0,0.08)]
+    lg:h-[600px]
+    lg:w-[470px]
+    lg:-translate-y-10
   "
 >
         {photos.map((photo, index) => (
@@ -61,7 +59,7 @@ export default function PhotoSlideshow() {
       </div>
 
       {/* Navigation Dots */}
-      <div className="flex gap-9 mt-38">
+      <div className="mt-6 flex gap-7 lg:mt-10">
         {photos.map((_, index) => (
           <button
             key={index}
@@ -69,7 +67,6 @@ export default function PhotoSlideshow() {
             className={`
               h-3
               w-3
-              -translate-y-6
               rounded-full
               transition-all
               duration-300

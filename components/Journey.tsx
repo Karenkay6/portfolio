@@ -42,13 +42,17 @@ export default function Journey() {
             className="
               border-1
               border-[#000000]
-              px-8
-              py-10
+              px-4
+py-5
+sm:px-8
+sm:py-10
             "
           >
             <div className="divide-y divide-[#000000]/15">
               {/* EDUCATION ENTRY 1 */}
-              <article className="grid gap-6 py-8 md:grid-cols-[70px_1fr_auto]">
+              <article className="grid gap-6 py-8 grid-cols-1
+sm:grid-cols-[70px_1fr]
+lg:grid-cols-[70px_1fr_auto]">
                 <div
                   className="
                     flex
@@ -72,7 +76,8 @@ export default function Journey() {
                 </div>
 
                 <div>
-                  <h3 className="text-2xl font-bold text-[#000000]">
+                  <h3 className="text-xl
+sm:text-2xl font-bold text-[#000000]">
                     University of Texas at San Antonio
                   </h3>
 
@@ -85,7 +90,10 @@ export default function Journey() {
                     San Antonio, TX
                   </p>
 
-                  <ul className="mt-5 space-y-3 text-lg leading-9">
+                  <ul className="mt-5 space-y-3 text-base
+leading-7
+sm:text-lg
+sm:leading-9">
                     <li>
                       · Relevant coursework: Data Structures & Algorithms,
                       Databases, Software Engineering, Cloud Technologies, AI/ML
@@ -105,7 +113,9 @@ export default function Journey() {
               </article>
 
               {/* EDUCATION ENTRY 2 */}
-              <article className="grid gap-6 py-8 md:grid-cols-[70px_1fr_auto]">
+              <article className="grid gap-6 py-8 grid-cols-1
+sm:grid-cols-[70px_1fr]
+lg:grid-cols-[70px_1fr_auto]">
                 <div
                   className="
                     flex
@@ -129,7 +139,8 @@ export default function Journey() {
                 </div>
 
                 <div>
-                  <h3 className="text-2xl font-bold text-[#000000]">
+                  <h3 className="text-xl
+sm:text-2xl font-bold text-[#000000]">
                     Austin Community College
                   </h3>
 
@@ -142,7 +153,10 @@ export default function Journey() {
                     Austin, TX
                   </p>
 
-                  <ul className="mt-5 space-y-3 text-lg leading-10">
+                  <ul className="mt-5 space-y-3 text-base
+leading-7
+sm:text-lg
+sm:leading-9">
                     <li>· Coursework: Principles of IT, Calculus I.</li>
                   </ul>
                 </div>
@@ -177,7 +191,8 @@ export default function Journey() {
                 </div>
 
                 <div>
-                  <h3 className="text-2xl font-bold text-[#000000]">
+                  <h3 className="text-xl
+sm:text-2xl font-bold text-[#000000]">
                     Pflugerville High School
                   </h3>
 
@@ -190,7 +205,10 @@ export default function Journey() {
                     Pflugerville, TX
                   </p>
 
-                  <ul className="mt-5 space-y-3 text-lg leading-10">
+                  <ul className="mt-5 space-y-3 text-base
+leading-7
+sm:text-lg
+sm:leading-9">
                     <li>
                       · Coursework: Principles of IT, Advanced Cloud Computing,
                       Computer Science I – III, Practicum in STEM I & II.
@@ -242,11 +260,16 @@ export default function Journey() {
             */}
           </div>
 
-          <section className="border border-[#000000]/80 px-8 py-10">
+          <section className="border border-[#000000]/80 px-4
+py-5
+sm:px-8
+sm:py-10">
   <div className="divide-y divide-[#000000]/15">
 
     {/* EXPERIENCE ENTRY 1 */}
-    <article className="grid gap-6 py-8 md:grid-cols-[70px_1fr_auto]">
+    <article className="grid gap-6 py-8 grid-cols-1
+sm:grid-cols-[70px_1fr]
+lg:grid-cols-[70px_1fr_auto]">
       <div
         className="
           flex
@@ -270,7 +293,8 @@ export default function Journey() {
       </div>
 
       <div>
-        <h3 className="text-2xl font-bold text-[#000000]">
+        <h3 className="text-xl
+sm:text-2xl font-bold text-[#000000]">
           National Society of Black Engineers
         </h3>
 
@@ -282,7 +306,10 @@ export default function Journey() {
           San Antonio, TX
         </p>
 
-        <ul className="mt-5 space-y-3 text-lg leading-10">
+        <ul className="mt-5 space-y-3 text-base
+leading-7
+sm:text-lg
+sm:leading-9">
           <li>
             · Support membership recruitment, engagement, and retention for the
             UTSA chapter.
@@ -301,7 +328,9 @@ export default function Journey() {
     </article>
 
     {/* EXPERIENCE ENTRY 2 */}
-    <article className="grid gap-6 py-8 md:grid-cols-[70px_1fr_auto]">
+    <article className="grid gap-6 py-8 grid-cols-1
+sm:grid-cols-[70px_1fr]
+lg:grid-cols-[70px_1fr_auto]">
       <div
         className="
           flex
@@ -325,7 +354,8 @@ export default function Journey() {
       </div>
 
       <div>
-        <h3 className="text-2xl font-bold text-[#000000]">
+        <h3 className="text-xl
+sm:text-2xl font-bold text-[#000000]">
           University of Texas at San Antonio
         </h3>
 
@@ -337,7 +367,10 @@ export default function Journey() {
           San Antonio, TX
         </p>
 
-        <ul className="mt-5 space-y-3 text-lg leading-10">
+        <ul className="mt-5 space-y-3 text-base
+leading-7
+sm:text-lg
+sm:leading-9">
           <li>
             · Mentor students as they adjust to university life and navigate
             academic and campus resources.
@@ -356,7 +389,9 @@ export default function Journey() {
     </article>
 
     {/* EXPERIENCE ENTRY 3 */}
-    <article className="grid gap-6 py-8 md:grid-cols-[70px_1fr_auto]">
+    <article className="grid gap-6 py-8 grid-cols-1
+sm:grid-cols-[70px_1fr]
+lg:grid-cols-[70px_1fr_auto]">
       <div
         className="
           flex
@@ -380,7 +415,8 @@ export default function Journey() {
       </div>
 
       <div>
-        <h3 className="text-2xl font-bold text-[#000000]">
+        <h3 className="texttext-xl
+sm:text-2xl-2xl font-bold text-[#000000]">
           The Association for Computing Machinery
         </h3>
 
@@ -392,7 +428,10 @@ export default function Journey() {
           San Antonio, TX
         </p>
 
-        <ul className="mt-5 space-y-3 text-lg leading-10">
+        <ul className="mt-5 space-y-3 text-base
+leading-7
+sm:text-lg
+sm:leading-9">
           <li>
             · Coordinate logistics and planning for ACM-hosted hackathons,
             ensuring a smooth experience for participants and volunteers.
@@ -411,7 +450,9 @@ export default function Journey() {
     </article>
 
     {/* EXPERIENCE ENTRY 4 */}
-    <article className="grid gap-6 py-8 md:grid-cols-[70px_1fr_auto]">
+    <article className="grid gap-6 py-8 grid-cols-1
+sm:grid-cols-[70px_1fr]
+lg:grid-cols-[70px_1fr_auto]">
       <div
         className="
           flex
@@ -435,7 +476,8 @@ export default function Journey() {
       </div>
 
       <div>
-        <h3 className="text-2xl font-bold text-[#000000]">
+        <h3 className="text-xl
+sm:text-2xl font-bold text-[#000000]">
           Code2College
         </h3>
 
@@ -447,7 +489,10 @@ export default function Journey() {
           Austin, TX
         </p>
 
-        <ul className="mt-5 space-y-3 text-lg leading-10">
+        <ul className="mt-5 space-y-3 text-base
+leading-7
+sm:text-lg
+sm:leading-9">
           <li>
             · Teach students foundational software development concepts through
             structured lessons and hands-on Python activities.
