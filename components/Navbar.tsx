@@ -43,7 +43,9 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     handleScroll();
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   useEffect(() => {
@@ -67,49 +69,58 @@ export default function Navbar() {
       className="
         fixed
         left-1/2
-        top-7
+        top-4
         z-[999]
         -translate-x-1/2
+
+        sm:top-6
+        lg:top-7
       "
       aria-label="Main navigation"
     >
       <div
-  className="
-    relative
-    max-w-[calc(100vw-32px)]
-    overflow-x-auto
-    rounded-full
-    border-2
-    border-red-800
-    bg-white/85
-    px-4
-    py-3
-    shadow-xl
-    backdrop-blur-xl
-    sm:px-8
-    sm:py-4
-  "
->
+        className="
+          relative
+          max-w-[calc(100vw-24px)]
+          overflow-hidden
+          rounded-full
+          border-2
+          border-red-800
+          bg-white/85
+          px-3
+          py-3
+          shadow-xl
+          backdrop-blur-xl
+
+          sm:max-w-[calc(100vw-48px)]
+          sm:px-7
+          sm:py-4
+        "
+      >
         <div
-  className="
-    relative
-    flex
-    items-center
-    gap-6
-    whitespace-nowrap
-    text-sm
-    font-semibold
-    sm:gap-10
-    sm:text-base
-    lg:gap-16
-    lg:text-lg
-  "
->
+          className="
+            relative
+            flex
+            items-center
+            gap-4
+            whitespace-nowrap
+            text-[12px]
+            font-semibold
+
+            min-[430px]:gap-5
+            min-[430px]:text-sm
+
+            sm:gap-8
+            sm:text-base
+
+            lg:gap-12
+          "
+        >
           <span
             className="
               absolute
-              -bottom-[7px]
-              h-[3px]
+              bottom-[2px]
+              h-[4px]
               rounded-full
               bg-[#5d090d]
               transition-all
