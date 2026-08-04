@@ -12,33 +12,42 @@ export default function PhotoSlideshow() {
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % photos.length);
+    const timer = window.setInterval(() => {
+      setCurrent((previous) => (previous + 1) % photos.length);
     }, 10000);
 
-    return () => clearInterval(timer);
+    return () => {
+      window.clearInterval(timer);
+    };
   }, []);
 
   return (
-    <div className="flex flex-col items-center">
-      {/* Photo Frame */}
+    <div className="flex w-full flex-col items-center">
+      {/* PHOTO FRAME */}
       <div
-  className="
-    relative
-    aspect-[4/5]
-    w-full
-    max-w-[470px]
-    overflow-hidden
-    rounded-[28px]
-    border
-    border-[#8b1115]/40
-    bg-white/25
-    shadow-[0_25px_60px_rgba(0,0,0,0.08)]
-    lg:h-[600px]
-    lg:w-[470px]
-    lg:-translate-y-10
-  "
->
+        className="
+          relative
+          aspect-[4/5]
+          w-full
+          max-w-[220px]
+          overflow-hidden
+          rounded-[24px]
+          border
+          border-[#8b1115]/40
+          bg-white/25
+          shadow-[0_25px_60px_rgba(0,0,0,0.08)]
+
+          min-[430px]:max-w-[380px]
+
+          sm:max-w-[430px]
+          sm:rounded-[28px]
+
+          lg:h-[600px]
+          lg:w-[470px]
+          lg:max-w-none
+          lg:-translate-y-10
+        "
+      >
         {photos.map((photo, index) => (
           <img
             key={photo}
@@ -47,8 +56,8 @@ export default function PhotoSlideshow() {
             className={`
               absolute
               inset-0
-              w-full
               h-full
+              w-full
               object-cover
               transition-opacity
               duration-1000
@@ -58,11 +67,13 @@ export default function PhotoSlideshow() {
         ))}
       </div>
 
-      {/* Navigation Dots */}
-      <div className="mt-6 flex gap-7 lg:mt-10">
+      {/* NAVIGATION DOTS */}
+      <div className="mt-6 flex gap-6 sm:gap-7 lg:mt-10">
         {photos.map((_, index) => (
           <button
             key={index}
+            type="button"
+            aria-label={`View photo ${index + 1}`}
             onClick={() => setCurrent(index)}
             className={`
               h-3
@@ -70,10 +81,9 @@ export default function PhotoSlideshow() {
               rounded-full
               transition-all
               duration-300
-
               ${
                 current === index
-                  ? "bg-[#300d0d] scale-125"
+                  ? "scale-125 bg-[#300d0d]"
                   : "bg-white/60 hover:bg-white"
               }
             `}
