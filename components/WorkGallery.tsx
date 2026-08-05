@@ -6,16 +6,11 @@ export default function WorkGallery() {
 
   return (
     <section
-  id="projects"
-  className="
-    flex
-    scroll-mt-28
-    flex-col
-  "
->
+      id="projects"
+      className="flex scroll-mt-28 flex-col"
+    >
       <SectionDivider title="Projects" />
 
-      <div className="h-[10px]" />
 
       <div
         className="
