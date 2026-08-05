@@ -6,50 +6,64 @@ export default function WorkGallery() {
 
   return (
     <section
-      id="projects"
-      className="
-        flex
-        flex-col
-      "
-    >
+  id="projects"
+  className="
+    flex
+    scroll-mt-28
+    flex-col
+    pt-10
+
+    sm:pt-14
+
+    lg:pt-6
+  "
+>
       <SectionDivider title="Projects" />
- <div className="h-[10px]" />
+
+      <div className="h-[20px]" />
+
       <div
         className="
           flex
           flex-col
           items-center
           px-4
-py-10
-sm:py-20
+          py-10
+
+          sm:px-6
+          sm:py-16
+
+          lg:py-20
         "
       >
-        {/*
-          This wrapper controls the width of both the subtitle
-          and the project gallery so they align.
-        */}
         <div className="w-full max-w-[1050px]">
           {/* PROJECTS SUBTITLE */}
           <div className="mt-8">
-            <p className="text-lg font-semibold text-center text-[#db1717]/75 leading-relaxed">
+            <p className="text-center text-lg font-semibold leading-relaxed text-[#db1717]/75">
               A few things I want people to actually click on:
             </p>
           </div>
- <div className="h-[15px]" />
+
+          <div className="h-[15px]" />
+
           {/* MAIN PROJECTS GALLERY */}
           <div
             className="
               mt-10
-sm:mt-24
-              w-full
               grid
+              w-full
               grid-cols-1
-              md:grid-cols-2
               gap-6
-sm:gap-10
+
+              sm:mt-16
+              sm:gap-8
+
+              md:grid-cols-2
+
+              lg:mt-24
+              lg:gap-10
             "
           >
-            {/* FEATURED PROJECT */}
             <div className="md:col-span-2">
               <ProjectTile
                 title="StudyBuddy"
@@ -59,7 +73,6 @@ sm:gap-10
               />
             </div>
 
-            {/* MIDDLE ROW */}
             <ProjectTile
               title="TochiBot"
               color={cardColor}
@@ -78,7 +91,6 @@ sm:gap-10
               description="A custom portfolio website designed and built from scratch to showcase software projects, leadership experience, and technical growth."
             />
 
-            {/* BOTTOM FEATURED PROJECT */}
             <div className="md:col-span-2">
               <ProjectTile
                 title="MedTech Project"
@@ -91,25 +103,29 @@ sm:gap-10
             </div>
           </div>
 
- <div className="h-[15px]" />
+          <div className="h-[15px]" />
 
           {/* SMALLER PROJECTS SUBTITLE */}
-          <div className="py-14">
-            <p className="text-[#db1717]/75 font-semibold text-center text-lg leading-relaxed ">
-              Some of my smaller projects i've built along the way:
+          <div className="py-10 sm:py-14">
+            <p className="text-center text-lg font-semibold leading-relaxed text-[#db1717]/75">
+              Some of my smaller projects I&apos;ve built along the way:
             </p>
           </div>
 
- <div className="h-[15px]" />
+          <div className="h-[15px]" />
 
           {/* SMALLER PROJECTS */}
           <div
             className="
               grid
               grid-cols-1
+              gap-6
+
+              sm:gap-8
+
               md:grid-cols-2
-              gap-x-10
-              gap-y-10
+
+              lg:gap-10
             "
           >
             <ProjectTile

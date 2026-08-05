@@ -260,8 +260,15 @@ export default function Home() {
         items-start
         justify-center
         bg-[#f3b79c]
-        px-8
-        py-8
+
+        px-[6px]
+        py-[6px]
+
+        sm:px-4
+        sm:py-4
+
+        lg:px-8
+        lg:py-8
       "
     >
       <Navbar />
