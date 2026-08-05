@@ -49,23 +49,34 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
-    const element = itemRefs.current[active];
+    const updateIndicator = () => {
+      const element = itemRefs.current[active];
 
-    if (!element) return;
+      if (!element) return;
 
-    const elementRect = element.getBoundingClientRect();
-    const parentRect = element.parentElement?.getBoundingClientRect();
+      const elementRect = element.getBoundingClientRect();
+      const parentRect = element.parentElement?.getBoundingClientRect();
 
-    if (!parentRect) return;
+      if (!parentRect) return;
 
-    setIndicatorStyle({
-      transform: `translateX(${elementRect.left - parentRect.left}px)`,
-      width: elementRect.width,
-    });
+      setIndicatorStyle({
+        transform: `translateX(${elementRect.left - parentRect.left}px)`,
+        width: elementRect.width,
+      });
+    };
+
+    updateIndicator();
+
+    window.addEventListener("resize", updateIndicator);
+
+    return () => {
+      window.removeEventListener("resize", updateIndicator);
+    };
   }, [active]);
 
   return (
     <nav
+      aria-label="Main navigation"
       className="
         fixed
         left-1/2
@@ -76,7 +87,6 @@ export default function Navbar() {
         sm:top-6
         lg:top-7
       "
-      aria-label="Main navigation"
     >
       <div
         className="
@@ -116,19 +126,6 @@ export default function Navbar() {
             lg:gap-12
           "
         >
-          <span
-  className="
-    absolute
-    -bottom-5
-    h-[4px]
-    rounded-full
-    bg-[#5d090d]
-    transition-all
-    duration-500
-  "
-  style={indicatorStyle}
-/>
-
           {navItems.map((item) => (
             <a
               key={item.id}
@@ -137,7 +134,7 @@ export default function Navbar() {
                 itemRefs.current[item.id] = element;
               }}
               onClick={() => setActive(item.id)}
-              className={`whitespace-nowrap transition-colors duration-300 ${
+              className={`relative z-10 whitespace-nowrap transition-colors duration-300 ${
                 active === item.id
                   ? "text-[#5d090d]"
                   : "text-[#7b6567] hover:text-[#5d090d]"
@@ -146,6 +143,22 @@ export default function Navbar() {
               {item.label}
             </a>
           ))}
+
+          <span
+            aria-hidden="true"
+            className="
+              pointer-events-none
+              absolute
+              -bottom-5
+              left-0
+              h-[4px]
+              rounded-full
+              bg-[#5d090d]
+              transition-[transform,width]
+              duration-500
+            "
+            style={indicatorStyle}
+          />
         </div>
       </div>
     </nav>

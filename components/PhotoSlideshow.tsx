@@ -23,29 +23,33 @@ export default function PhotoSlideshow() {
 
   return (
     <div className="flex w-full flex-col items-center">
+      {/* PHOTO */}
       <div
         className="
           relative
           aspect-[4/5]
-          w-[88%]
-          max-w-[400px]
+          w-[94%]
+          max-w-[430px]
           overflow-hidden
-          rounded-[26px]
+          rounded-[28px]
           border
           border-[#8b1115]/40
           bg-white
           shadow-[0_25px_60px_rgba(0,0,0,0.08)]
 
-          min-[430px]:w-[86%]
-          min-[430px]:max-w-[440px]
+          min-[430px]:w-[90%]
+          min-[430px]:max-w-[460px]
 
-          sm:max-w-[470px]
-          sm:rounded-[28px]
+          sm:max-w-[500px]
 
-          lg:h-[600px]
-          lg:w-[470px]
+          lg:mt-7
+          lg:h-[560px]
+          lg:w-[430px]
           lg:max-w-none
-          lg:translate-y-5
+
+          xl:mt-8
+          xl:h-[600px]
+          xl:w-[470px]
         "
       >
         {photos.map((photo, index) => (
@@ -61,13 +65,26 @@ export default function PhotoSlideshow() {
               object-cover
               transition-opacity
               duration-1000
-              ${current === index ? "opacity-100" : "opacity-0"}
+              ${
+                current === index
+                  ? "opacity-100"
+                  : "pointer-events-none opacity-0"
+              }
             `}
           />
         ))}
       </div>
 
-      <div className="mt-7 flex gap-7 lg:mt-10">
+      {/* DOTS */}
+      <div
+        className="
+          mt-7
+          flex
+          gap-7
+
+          lg:mt-10
+        "
+      >
         {photos.map((_, index) => (
           <button
             key={index}
@@ -80,10 +97,11 @@ export default function PhotoSlideshow() {
               rounded-full
               transition-all
               duration-300
+
               ${
                 current === index
                   ? "scale-125 bg-[#300d0d]"
-                  : "bg-white/60 hover:bg-white"
+                  : "bg-[#d5aca4] hover:bg-[#8b1115]/60"
               }
             `}
           />
