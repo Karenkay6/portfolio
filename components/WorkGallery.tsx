@@ -11,16 +11,11 @@ export default function WorkGallery() {
     flex
     scroll-mt-28
     flex-col
-    pt-10
-
-    sm:pt-14
-
-    lg:pt-6
   "
 >
       <SectionDivider title="Projects" />
 
-      <div className="h-[20px]" />
+      <div className="h-[10px]" />
 
       <div
         className="

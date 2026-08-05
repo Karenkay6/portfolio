@@ -22,34 +22,41 @@ export default function PhotoSlideshow() {
   }, []);
 
   return (
-    <div className="flex w-full flex-col items-center">
-      {/* PHOTO */}
+    <div
+      className="
+        flex
+        w-full
+        flex-col
+        items-center
+
+        lg:items-end
+      "
+    >
+      {/* PHOTO FRAME */}
       <div
         className="
           relative
-          aspect-[4/5]
-          w-[94%]
-          max-w-[430px]
+          aspect-[16/10]
+          w-full
+          max-w-[560px]
           overflow-hidden
-          rounded-[28px]
+          rounded-[24px]
           border
-          border-[#8b1115]/40
+          border-[#8b1115]/45
           bg-white
-          shadow-[0_25px_60px_rgba(0,0,0,0.08)]
+          shadow-[0_22px_50px_rgba(70,15,18,0.09)]
 
-          min-[430px]:w-[90%]
-          min-[430px]:max-w-[460px]
+          sm:max-w-[620px]
+          sm:rounded-[28px]
 
-          sm:max-w-[500px]
-
-          lg:mt-7
-          lg:h-[560px]
-          lg:w-[430px]
+          lg:aspect-auto
+          lg:h-[610px]
+          lg:w-[500px]
           lg:max-w-none
+          lg:rounded-[30px]
 
-          xl:mt-8
-          xl:h-[600px]
-          xl:w-[470px]
+          xl:h-[640px]
+          xl:w-[540px]
         "
       >
         {photos.map((photo, index) => (
@@ -65,6 +72,7 @@ export default function PhotoSlideshow() {
               object-cover
               transition-opacity
               duration-1000
+
               ${
                 current === index
                   ? "opacity-100"
@@ -78,11 +86,14 @@ export default function PhotoSlideshow() {
       {/* DOTS */}
       <div
         className="
-          mt-7
+          mt-5
           flex
-          gap-7
+          justify-center
+          gap-5
 
-          lg:mt-10
+          lg:w-[500px]
+
+          xl:w-[540px]
         "
       >
         {photos.map((_, index) => (
@@ -100,8 +111,8 @@ export default function PhotoSlideshow() {
 
               ${
                 current === index
-                  ? "scale-125 bg-[#300d0d]"
-                  : "bg-[#d5aca4] hover:bg-[#8b1115]/60"
+                  ? "scale-125 bg-[#5d090d]"
+                  : "bg-[#d7b4ae] hover:bg-[#8b1115]/60"
               }
             `}
           />
