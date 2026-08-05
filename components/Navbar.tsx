@@ -82,7 +82,7 @@ export default function Navbar() {
         className="
           relative
           max-w-[calc(100vw-24px)]
-          overflow-hidden
+          overflow-visible
           rounded-full
           border-2
           border-red-800
@@ -117,17 +117,17 @@ export default function Navbar() {
           "
         >
           <span
-            className="
-              absolute
-              bottom-[2px]
-              h-[4px]
-              rounded-full
-              bg-[#5d090d]
-              transition-all
-              duration-500
-            "
-            style={indicatorStyle}
-          />
+  className="
+    absolute
+    -bottom-5
+    h-[4px]
+    rounded-full
+    bg-[#5d090d]
+    transition-all
+    duration-500
+  "
+  style={indicatorStyle}
+/>
 
           {navItems.map((item) => (
             <a

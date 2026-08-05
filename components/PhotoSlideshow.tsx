@@ -23,29 +23,29 @@ export default function PhotoSlideshow() {
 
   return (
     <div className="flex w-full flex-col items-center">
-      {/* PHOTO FRAME */}
       <div
         className="
           relative
           aspect-[4/5]
-          w-full
-          max-w-[220px]
+          w-[88%]
+          max-w-[400px]
           overflow-hidden
-          rounded-[24px]
+          rounded-[26px]
           border
           border-[#8b1115]/40
-          bg-white/25
+          bg-white
           shadow-[0_25px_60px_rgba(0,0,0,0.08)]
 
-          min-[430px]:max-w-[380px]
+          min-[430px]:w-[86%]
+          min-[430px]:max-w-[440px]
 
-          sm:max-w-[430px]
+          sm:max-w-[470px]
           sm:rounded-[28px]
 
           lg:h-[600px]
           lg:w-[470px]
           lg:max-w-none
-          lg:-translate-y-10
+          lg:translate-y-5
         "
       >
         {photos.map((photo, index) => (
@@ -67,8 +67,7 @@ export default function PhotoSlideshow() {
         ))}
       </div>
 
-      {/* NAVIGATION DOTS */}
-      <div className="mt-6 flex gap-6 sm:gap-7 lg:mt-10">
+      <div className="mt-7 flex gap-7 lg:mt-10">
         {photos.map((_, index) => (
           <button
             key={index}
