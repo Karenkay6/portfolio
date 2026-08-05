@@ -275,10 +275,15 @@ export default function Home() {
 
       <Frame>
         <Hero />
+        <div className="h-[20px]" />
         <WorkGallery />
+        <div className="h-[20px]" />
         <Journey />
+        <div className="h-[20px]" />
         <BeyondCode />
+        <div className="h-[20px]" />
         <ContactSection />
+        
       </Frame>
     </main>
   );

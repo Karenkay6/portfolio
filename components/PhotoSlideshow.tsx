@@ -36,6 +36,8 @@ export default function PhotoSlideshow() {
         ))}
       </div>
 
+<div className="h-[20px]" />
+
       <div className="mt-5 flex justify-center gap-5 lg:w-[500px] xl:w-[530px]">
         {photos.map((_, index) => (
           <button
