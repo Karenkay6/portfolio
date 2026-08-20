@@ -14,10 +14,8 @@ interface ProjectTileProps {
 
 export default function ProjectTile({
   title,
-  subtitle,
   description,
   tech,
-  color = "#f2e7e1",
   featured = false,
   status,
   revenue,
@@ -27,61 +25,80 @@ export default function ProjectTile({
 }: ProjectTileProps) {
   const hasMetrics = Boolean(revenue || activeUsers);
 
-const firstMetricLabel =
-  title === "TochiBot" ? "Downloads" : revenueLabel;
+  const firstMetricLabel =
+    title === "TochiBot" ? "Downloads" : revenueLabel;
 
-const secondMetricLabel =
-  title === "TochiBot" ? "Rating" : activeUsersLabel;
+  const secondMetricLabel =
+    title === "TochiBot" ? "Rating" : activeUsersLabel;
 
   return (
     <div
-      className={`
-  flex
-  flex-col
-  rounded-none
-  border
-  border-[#8b1115]/50
-  bg-transparent
-  p-5
-  sm:p-8
-  ${
-    featured
-      ? "min-h-[220px] sm:min-h-[260px]"
-      : "min-h-[210px] sm:min-h-[240px]"
-  }
-`}
+      style={{
+        padding: "clamp(16px, 3vw, 32px)",
+      }}
+      className="
+        flex
+        h-full
+        flex-col
+        border
+        border-[#8b1115]/50
+        bg-transparent
+      "
     >
-     
       {/* TOP ROW */}
-      <div className="flex justify-between items-start gap-6">
+      <div
+        style={{
+          gap: "clamp(12px, 2vw, 24px)",
+        }}
+        className="
+          flex
+          flex-wrap
+          items-start
+          justify-between
+        "
+      >
         <h3
+          style={{
+            fontSize: "clamp(1.35rem, 2.3vw, 1.875rem)",
+          }}
           className="
-  flex
-  items-center
-  gap-2
-  text-2xl
-  font-bold
-  leading-tight
-  text-[#000000]
-  sm:gap-3
-  sm:text-3xl
-"
+            flex
+            min-w-0
+            items-center
+            gap-2
+            break-words
+            font-bold
+            leading-tight
+            text-[#000000]
+          "
         >
-          <span className="text-[#000000] text-xl">•</span>
+          <span
+            style={{
+              fontSize: "clamp(16px, 1.5vw, 20px)",
+            }}
+            className="shrink-0"
+          >
+            •
+          </span>
+
           {title}
         </h3>
 
         {status && (
           <span
+            style={{
+              paddingLeft: "clamp(10px, 1.5vw, 16px)",
+              paddingRight: "clamp(10px, 1.5vw, 16px)",
+              paddingTop: "clamp(6px, 0.7vw, 8px)",
+              paddingBottom: "clamp(6px, 0.7vw, 8px)",
+              fontSize: "clamp(10px, 0.8vw, 12px)",
+            }}
             className="
               shrink-0
               border
               border-[#300d0d]/40
-              px-4
-              py-2
-              text-xs
-              tracking-widest
               uppercase
+              tracking-widest
               text-[#000000]
             "
           >
@@ -90,152 +107,157 @@ const secondMetricLabel =
         )}
       </div>
 
-      {/* SUBTITLE */}
-      {/*
-      <p
-        className="
-          mt-8
-          text-xl
-          leading-relaxed
-          text-[#000000]
-          max-w-4xl
-        "
-      >
-        {subtitle}
-      </p>
-      */}
-
       {/* MAIN DIVIDER */}
       <div
+        style={{
+          marginTop: "clamp(16px, 2vw, 20px)",
+        }}
         className="
-          mt-5
           border-t-2
           border-[#8b1115]/50
         "
       />
 
-      {/* EVERYTHING BELOW THE DIVIDER */}
-      <div className="px-1 sm:px-5">
-        {/* DETAILS */}
+      {/* CONTENT */}
+      <div
+        style={{
+          paddingLeft: "clamp(0px, 1.3vw, 20px)",
+          paddingRight: "clamp(0px, 1.3vw, 20px)",
+        }}
+      >
         <p
+          style={{
+            marginTop: "clamp(16px, 2vw, 24px)",
+            fontSize: "clamp(15px, 1.5vw, 20px)",
+          }}
           className="
-  mt-5
-  text-lg
-  leading-7
-  text-[#000000]
-  sm:mt-6
-  sm:text-xl
-  sm:leading-8
-"
+            leading-[1.6]
+            text-[#000000]
+          "
         >
           {description}
         </p>
 
-        {/* PROJECT METRICS */}
-{hasMetrics && (
-  <>
-    {/* Top dotted divider */}
-    <div
-      className="
-        mt-8
-        border-t
-        border-dotted
-        border-[#000000]/65
-      "
-    />
+        {/* METRICS */}
+        {hasMetrics && (
+          <>
+            <div
+              style={{
+                marginTop: "clamp(24px, 3vw, 32px)",
+              }}
+              className="
+                border-t
+                border-dotted
+                border-[#000000]/65
+              "
+            />
 
-    {/* Metrics */}
-    <div
-      className="
-        mt-6
-        grid
-        grid-cols-2
-        gap-8
-      "
-    >
-      {revenue && (
-        <div>
-  <p
-    className="
-      text-xl
-      font-bold
-      text-[#000000]
-    "
-  >
-    {revenue}
-  </p>
+            <div
+              style={{
+                marginTop: "clamp(20px, 2vw, 24px)",
+                gap: "clamp(20px, 3vw, 32px)",
+              }}
+              className="
+                grid
+                grid-cols-2
+              "
+            >
+              {revenue && (
+                <div>
+                  <p
+                    style={{
+                      fontSize:
+                        "clamp(18px, 1.7vw, 20px)",
+                    }}
+                    className="
+                      font-bold
+                      text-[#000000]
+                    "
+                  >
+                    {revenue}
+                  </p>
 
-  <p
-    className="
-      mt-2
-      text-xs
-      font-semibold
-      uppercase
-      tracking-wider
-      text-[#000000]/80
-    "
-  >
-    {firstMetricLabel}
-  </p>
-</div>
-      )}
+                  <p
+                    style={{
+                      fontSize:
+                        "clamp(10px, 0.8vw, 12px)",
+                    }}
+                    className="
+                      mt-2
+                      font-semibold
+                      uppercase
+                      tracking-wider
+                      text-[#000000]/80
+                    "
+                  >
+                    {firstMetricLabel}
+                  </p>
+                </div>
+              )}
 
-      {activeUsers && (
-        <div>
-  <p
-    className="
-      text-xl
-      font-bold
-      text-[#000000]
-    "
-  >
-    {activeUsers}
-  </p>
+              {activeUsers && (
+                <div>
+                  <p
+                    style={{
+                      fontSize:
+                        "clamp(18px, 1.7vw, 20px)",
+                    }}
+                    className="
+                      font-bold
+                      text-[#000000]
+                    "
+                  >
+                    {activeUsers}
+                  </p>
 
-  <p
-    className="
-      mt-2
-      text-xs
-      uppercase
-      font-semibold
-      tracking-wider
-      text-[#000000]/80
-    "
-  >
-    {secondMetricLabel}
-  </p>
-</div>
-      )}
-    </div>
+                  <p
+                    style={{
+                      fontSize:
+                        "clamp(10px, 0.8vw, 12px)",
+                    }}
+                    className="
+                      mt-2
+                      font-semibold
+                      uppercase
+                      tracking-wider
+                      text-[#000000]/80
+                    "
+                  >
+                    {secondMetricLabel}
+                  </p>
+                </div>
+              )}
+            </div>
 
-    {/* Bottom dotted divider */}
-    <div
-      className="
-        mt-8
-        border-t
-        border-dotted
-        border-[#000000]/65
-      "
-    />
-  </>
-)}
+            <div
+              style={{
+                marginTop: "clamp(24px, 3vw, 32px)",
+              }}
+              className="
+                border-t
+                border-dotted
+                border-[#000000]/65
+              "
+            />
+          </>
+        )}
 
-{/* TECH STACK */}
-<div
-  className="
-  mt-6
-  flex
-  flex-wrap
-  gap-x-5
-  gap-y-3
-  text-base
-  font-semibold
-  tracking-wide
-  text-[#000000]
-  sm:mt-8
-  sm:gap-x-8
-"
->
+        {/* TECH STACK */}
+        <div
+          style={{
+            marginTop: "clamp(24px, 3vw, 32px)",
+            columnGap: "clamp(16px, 3vw, 32px)",
+            rowGap: "clamp(10px, 1.5vw, 16px)",
+            fontSize: "clamp(13px, 1.2vw, 16px)",
+          }}
+          className="
+            flex
+            flex-wrap
+            font-semibold
+            tracking-wide
+            text-[#000000]
+          "
+        >
           {tech.map((item) => (
             <span
               key={item}
@@ -245,7 +267,7 @@ const secondMetricLabel =
                 gap-2
               "
             >
-              <span className="text-[#000000]">•</span>
+              <span>•</span>
               {item}
             </span>
           ))}
