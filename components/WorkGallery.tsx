@@ -7,53 +7,63 @@ export default function WorkGallery() {
   return (
     <section
       id="projects"
-      className="flex scroll-mt-28 flex-col"
+      className="
+        flex
+        scroll-mt-28
+        flex-col
+      "
     >
       <SectionDivider title="Projects" />
 
-
       <div
+        style={{
+          paddingLeft: "clamp(16px, 4vw, 40px)",
+          paddingRight: "clamp(16px, 4vw, 40px)",
+          paddingTop: "clamp(40px, 6vw, 80px)",
+          paddingBottom: "clamp(40px, 6vw, 80px)",
+        }}
         className="
           flex
           flex-col
           items-center
-          px-4
-          py-10
-
-          sm:px-6
-          sm:py-16
-
-          lg:py-20
         "
       >
         <div className="w-full max-w-[1050px]">
           {/* PROJECTS SUBTITLE */}
-          <div className="mt-8">
-            <p className="text-center text-lg font-semibold leading-relaxed text-[#db1717]/75">
+          <div
+            style={{
+              marginTop: "clamp(20px, 3vw, 32px)",
+            }}
+          >
+            <p
+              style={{
+                fontSize: "clamp(15px, 1.4vw, 18px)",
+              }}
+              className="
+                text-center
+                font-semibold
+                leading-relaxed
+                text-[#db1717]/75
+              "
+            >
               A few things I want people to actually click on:
             </p>
           </div>
 
-          <div className="h-[15px]" />
-
-          {/* MAIN PROJECTS GALLERY */}
+          {/* MAIN PROJECT GRID */}
           <div
+            style={{
+              marginTop: "clamp(45px, 7vw, 96px)",
+              gap: "clamp(24px, 3vw, 40px)",
+            }}
             className="
-              mt-10
               grid
               w-full
               grid-cols-1
-              gap-6
-
-              sm:mt-16
-              sm:gap-8
-
               md:grid-cols-2
-
-              lg:mt-24
-              lg:gap-10
             "
           >
+            {/* STUDYBUDDY */}
             <div className="md:col-span-2">
               <ProjectTile
                 title="StudyBuddy"
@@ -63,6 +73,7 @@ export default function WorkGallery() {
               />
             </div>
 
+            {/* TOCHIBOT */}
             <ProjectTile
               title="TochiBot"
               color={cardColor}
@@ -74,48 +85,68 @@ export default function WorkGallery() {
               activeUsersLabel="Rating"
             />
 
+            {/* PORTFOLIO */}
             <ProjectTile
               title="Portfolio"
               color={cardColor}
-              tech={["Next.js", "React", "Tailwind CSS", "TypeScript"]}
+              tech={[
+                "Next.js",
+                "React",
+                "Tailwind CSS",
+                "TypeScript",
+              ]}
               description="A custom portfolio website designed and built from scratch to showcase software projects, leadership experience, and technical growth."
             />
 
+            {/* MEDTECH */}
             <div className="md:col-span-2">
               <ProjectTile
-                title="MedTech Project"
+                title="MedCheck Project"
                 color={cardColor}
-                tech={["Healthcare", "Software", "UI/UX", "Research"]}
-                description="A healthcare-focused project exploring how technology can improve accessibility and patient experiences."
-                revenue="$400"
+                tech={[
+                  "Healthcare",
+                  "Software",
+                  "UI/UX",
+                  "Research",
+                ]}
+                description="MedCheck is an intelligent healthcare navigation platform designed to simplify what happens between noticing a symptom and knowing what to do next. Through an adaptive question-and-answer flow, MedCheck gathers relevant symptom information, identifies potential warning signs, provides appropriate next-step guidance, and helps users locate nearby healthcare services. Rather than replacing a medical professional, the platform is designed to help users make more informed decisions and arrive at appointments with clearer, structured information."
+                revenue="$200"
                 activeUsers="30"
               />
             </div>
           </div>
 
-          <div className="h-[15px]" />
-
-          {/* SMALLER PROJECTS SUBTITLE */}
-          <div className="py-10 sm:py-14">
-            <p className="text-center text-lg font-semibold leading-relaxed text-[#db1717]/75">
+          {/* SMALL PROJECTS SUBTITLE */}
+          <div
+            style={{
+              paddingTop: "clamp(42px, 6vw, 64px)",
+              paddingBottom: "clamp(42px, 6vw, 64px)",
+            }}
+          >
+            <p
+              style={{
+                fontSize: "clamp(15px, 1.4vw, 18px)",
+              }}
+              className="
+                text-center
+                font-semibold
+                leading-relaxed
+                text-[#db1717]/75
+              "
+            >
               Some of my smaller projects I&apos;ve built along the way:
             </p>
           </div>
 
-          <div className="h-[15px]" />
-
-          {/* SMALLER PROJECTS */}
+          {/* SMALL PROJECTS */}
           <div
+            style={{
+              gap: "clamp(24px, 3vw, 40px)",
+            }}
             className="
               grid
               grid-cols-1
-              gap-6
-
-              sm:gap-8
-
               md:grid-cols-2
-
-              lg:gap-10
             "
           >
             <ProjectTile

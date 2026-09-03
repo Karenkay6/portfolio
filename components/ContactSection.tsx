@@ -99,13 +99,15 @@ function ContactSection() {
             key={contact.title}
             href={contact.href}
             target={
-              contact.href.startsWith("http") ? "_blank" : undefined
-            }
-            rel={
-              contact.href.startsWith("http")
-                ? "noopener noreferrer"
-                : undefined
-            }
+  contact.href.startsWith("http") || contact.href.endsWith(".pdf")
+    ? "_blank"
+    : undefined
+}
+rel={
+  contact.href.startsWith("http") || contact.href.endsWith(".pdf")
+    ? "noopener noreferrer"
+    : undefined
+}
             className="
               group
               flex

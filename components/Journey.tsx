@@ -119,7 +119,7 @@ export default function Journey() {
                       </li>
 
                       <li>
-                        · Active in CougarCS · CougarAI · INROADS · NSBE · MLT ·
+                        · Active in ACM · HerScript · NSBE ·
                         ColorStack.
                       </li>
                     </ul>
@@ -258,12 +258,12 @@ export default function Journey() {
 
                     <ul className={listClass}>
                       <li>
-                        · Support membership recruitment, engagement, and
+                        · Supporting membership recruitment, engagement, and
                         retention for the UTSA chapter.
                       </li>
 
                       <li>
-                        · Connect members with chapter events, professional
+                        · Connecting members with chapter events, professional
                         development opportunities, and community resources.
                       </li>
                     </ul>
@@ -299,12 +299,12 @@ export default function Journey() {
 
                     <ul className={listClass}>
                       <li>
-                        · Mentor students as they adjust to university life and
+                        · Mentoring students as they adjust to university life and
                         navigate academic and campus resources.
                       </li>
 
                       <li>
-                        · Provide individual guidance, encouragement, and peer
+                        · Providing individual guidance, encouragement, and peer
                         support to help students achieve their goals.
                       </li>
                     </ul>
@@ -340,13 +340,13 @@ export default function Journey() {
 
                     <ul className={listClass}>
                       <li>
-                        · Coordinate logistics and planning for ACM-hosted
+                        · Coordinating logistics and planning for ACM-hosted
                         hackathons, ensuring a smooth experience for
                         participants and volunteers.
                       </li>
 
                       <li>
-                        · Collaborate with student leaders and sponsors to
+                        · Collaborating with student leaders and sponsors to
                         organize event operations, scheduling, and participant
                         engagement.
                       </li>
@@ -381,13 +381,13 @@ export default function Journey() {
 
                     <ul className={listClass}>
                       <li>
-                        · Teach students foundational software development
+                        · Taught students foundational software development
                         concepts through structured lessons and hands-on Python
                         activities.
                       </li>
 
                       <li>
-                        · Guide students through debugging, project development,
+                        · Guided students through debugging, project development,
                         and problem-solving exercises.
                       </li>
                     </ul>

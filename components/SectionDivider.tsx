@@ -6,29 +6,65 @@ export default function SectionDivider({
   title,
 }: SectionDividerProps) {
   return (
-    
-    <div className="w-full px-8 pt-10 md:px-12">
-      <div className="flex items-center gap-5 md:gap-8">
+    <div
+      style={{
+        paddingLeft: "clamp(16px, 4vw, 48px)",
+        paddingRight: "clamp(16px, 4vw, 48px)",
+        paddingTop: "clamp(28px, 4vw, 40px)",
+      }}
+      className="w-full"
+    >
+      <div
+        style={{
+          gap: "clamp(8px, 2vw, 32px)",
+        }}
+        className="
+          flex
+          items-center
+        "
+      >
         <div className="h-px flex-1 bg-[#8b1115]/65" />
 
-        <span className="text-xl text-[#8b1115]">✦</span>
+        <span
+          style={{
+            fontSize: "clamp(14px, 1.5vw, 20px)",
+          }}
+          className="
+            shrink-0
+            text-[#8b1115]
+          "
+        >
+          ✦
+        </span>
 
         <h2
+          style={{
+            fontSize: "clamp(2rem, 4vw, 3rem)",
+          }}
           className="
+            shrink-0
             whitespace-nowrap
             text-center
-            text-4xl
             font-bold
             leading-none
             text-[#661014]
-            md:text-5xl
           "
         >
           {title}
         </h2>
 
-        <span className="text-xl text-[#8b1115]">✦</span>
-<div className="h-[10px]" />
+        <span
+          style={{
+            fontSize: "clamp(14px, 1.5vw, 20px)",
+          }}
+          className="
+            shrink-0
+            text-[#8b1115]
+          "
+        >
+          ✦
+        </span>
+
         <div className="h-px flex-1 bg-[#8b1115]/65" />
       </div>
     </div>

@@ -21,20 +21,62 @@ const hobbies = [
 
 export default function BeyondCode() {
   return (
-    
-    <section id="beyond" className="flex flex-col pb-40">
-         <div className="h-[35px]" />
+    <section
+      id="beyond"
+      className="
+        flex
+        flex-col
+        pb-24
+
+        sm:pb-32
+        lg:pb-40
+      "
+    >
+      <div className="h-[35px]" />
+
       <SectionDivider title="Beyond Code" />
 
-       <div className="h-[5px]" />
+      <div className="h-[5px]" />
 
-      <div className="flex flex-col items-center px-6 pb-40 pt-16">
+      <div
+        className="
+          flex
+          flex-col
+          items-center
+          px-4
+          pb-24
+          pt-12
+
+          sm:px-6
+          sm:pb-32
+          sm:pt-16
+
+          lg:pb-40
+        "
+      >
         <div className="w-full max-w-[950px]">
-          <p className="text-center text-lg font-semibold leading-13 text-[#d10d0d]">
+          <p className="text-center text-lg font-semibold leading-8 text-[#d10d0d] sm:leading-[3.25rem]">
             Other things I find joy in:
           </p>
- <div className="h-[25px]" />
-          <div className="mt-16 grid grid-cols-1 gap-10 md:grid-cols-3">
+
+          <div className="h-[25px]" />
+
+          <div
+            className="
+              mt-10
+              grid
+              grid-cols-1
+              gap-6
+
+              sm:mt-14
+              sm:grid-cols-2
+              sm:gap-8
+
+              lg:mt-16
+              lg:grid-cols-3
+              lg:gap-10
+            "
+          >
             {hobbies.map((hobby) => (
               <Link
                 key={hobby.title}
@@ -42,7 +84,7 @@ export default function BeyondCode() {
                 className="
                   group
                   flex
-                  min-h-[230px]
+                  min-h-[190px]
                   flex-col
                   items-center
                   justify-center
@@ -50,24 +92,32 @@ export default function BeyondCode() {
                   border-2
                   border-[#300d0d]
                   bg-[#300d0d]/80
-                  px-8
-                  py-10
+                  px-6
+                  py-8
                   text-center
                   text-[#c2ccc1]
                   shadow-md
                   transition-all
                   duration-300
+
                   hover:-translate-y-1
                   hover:bg-[#e7dbdb]
                   hover:text-[#300d0d]
                   hover:shadow-lg
+
+                  sm:min-h-[210px]
+                  sm:px-7
+
+                  lg:min-h-[230px]
+                  lg:px-8
+                  lg:py-10
                 "
               >
-                <h3 className="text-3xl font-semibold">
+                <h3 className="text-2xl font-semibold sm:text-3xl">
                   {hobby.title}
                 </h3>
 
-                <p className="mt-4 max-w-[280px] text-lg font-medium leading-7 opacity-80">
+                <p className="mt-4 max-w-[280px] text-base font-medium leading-7 opacity-80 sm:text-lg">
                   {hobby.description}
                 </p>
 
