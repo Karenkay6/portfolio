@@ -269,7 +269,7 @@ export default function Journey() {
                     </ul>
                   </div>
 
-                  <p className={dateClass}>2025 – Present</p>
+                  <p className={dateClass}>2026 – Present</p>
                 </article>
 
                 {/* EXPERIENCE ENTRY 2 */}
