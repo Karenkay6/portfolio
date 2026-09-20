@@ -19,7 +19,7 @@ export default function WorkGallery() {
         style={{
           paddingLeft: "clamp(16px, 4vw, 40px)",
           paddingRight: "clamp(16px, 4vw, 40px)",
-          paddingTop: "clamp(40px, 6vw, 80px)",
+          paddingTop: "clamp(24px, 3vw, 40px)",
           paddingBottom: "clamp(40px, 6vw, 80px)",
         }}
         className="
@@ -32,7 +32,7 @@ export default function WorkGallery() {
           {/* PROJECTS SUBTITLE */}
           <div
             style={{
-              marginTop: "clamp(20px, 3vw, 32px)",
+              marginTop: "clamp(8px, 1vw, 16px)",
             }}
           >
             <p
@@ -51,11 +51,11 @@ export default function WorkGallery() {
           </div>
 
           {/* MAIN PROJECT GRID */}
-          <div
-            style={{
-              marginTop: "clamp(45px, 7vw, 96px)",
-              gap: "clamp(24px, 3vw, 40px)",
-            }}
+<div
+  style={{
+    marginTop: "clamp(24px, 3vw, 40px)",
+    gap: "clamp(24px, 3vw, 40px)",
+  }}
             className="
               grid
               w-full
@@ -79,9 +79,9 @@ export default function WorkGallery() {
               color={cardColor}
               tech={["Python", "OpenAI", "Tkinter"]}
               description="An AI assistant built with Python that answers questions, helps with productivity tasks, and explores natural language processing."
-              revenue="100+"
-              revenueLabel="Downloads"
-              activeUsers="4.9 / 5"
+              revenue="40+"
+              revenueLabel="Users"
+              activeUsers="4.3 / 5"
               activeUsersLabel="Rating"
             />
 
@@ -110,8 +110,8 @@ export default function WorkGallery() {
                   "Research",
                 ]}
                 description="MedCheck is an intelligent healthcare navigation platform designed to simplify what happens between noticing a symptom and knowing what to do next. Through an adaptive question-and-answer flow, MedCheck gathers relevant symptom information, identifies potential warning signs, provides appropriate next-step guidance, and helps users locate nearby healthcare services. Rather than replacing a medical professional, the platform is designed to help users make more informed decisions and arrive at appointments with clearer, structured information."
-                revenue="$200"
-                activeUsers="30"
+                revenue="$100+"
+                activeUsers="25+"
               />
             </div>
           </div>
