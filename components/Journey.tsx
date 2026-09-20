@@ -120,7 +120,7 @@ export default function Journey() {
 
                       <li>
                         · Active in ACM · HerScript · NSBE ·
-                        ColorStack.
+                        ColorStack · INROADS
                       </li>
                     </ul>
                   </div>
